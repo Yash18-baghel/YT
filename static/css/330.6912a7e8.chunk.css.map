@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/330.6912a7e8.chunk.css","mappings":"AAAA,yBAEI,cAEI,sBAAwB,CADxB,qBAEJ,CACJ","sources":["Pages/index.css"],"sourcesContent":["@media (max-width: 768px) {\r\n\r\n    .react-player {\r\n        width: 300px !important;\r\n        height: 200px !important;\r\n    }\r\n}"],"names":[],"sourceRoot":""}
