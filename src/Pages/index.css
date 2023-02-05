@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+
+    .react-player {
+        width: 300px !important;
+        height: 200px !important;
+    }
+}
