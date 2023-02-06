@@ -12,7 +12,7 @@ export const Navbar = () => {
       alert('please search something...')
     }
     else {
-      navigate(`/search/${text}`)
+      navigate(`/YT/search/${text}`)
     }
 
 
@@ -33,7 +33,7 @@ export const Navbar = () => {
           <span className="absolute inset-y-0 left-0 flex items-center  text-2xl pl-2">
             {/* <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg> */}
           </span>
-          <input onChange={e => SetText(e.target.value)} className="placeholder:italic placeholder:text-slate-400 block bg-gray-600 w-full border border-slate-300 py-1 pl-4 rounded-md md:py-2 md:pl-9 md:pr-3 shadow-sm focus:outline-none focus:border-slates-500 text-white focus:ring-slate-900 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search" />
+          <input onChange={e => SetText(e.target.value)} className="placeholder:italic w-36 text-sm py-1 px-2 placeholder:text-slate-400 block bg-gray-600 md:w-full border border-slate-300 md:py-1 md:pl-4 rounded-md  md:pr-3 shadow-sm focus:outline-none focus:border-slates-500 text-white focus:ring-slate-900 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search" />
 
         </label>
         <button type='submit' className="bg-gray-700 hover:bg-zinc-500 active:bg-zinc-700 focus:outline-none focus:ring rounded-full p-2  mx-2 focus:ring-violet-300 ...">

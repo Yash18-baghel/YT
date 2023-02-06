@@ -14,7 +14,8 @@ const ChannelDetail = () => {
   const [ischannelVideosLoading, setischannelVideosLoading] = useState(true)
 
   const param = useLocation();
-  const id = param.pathname.split('/')[2]
+  const length =  param.pathname.split('/').length
+  const id = param.pathname.split('/')[length-1]
 
   useEffect(() => {
     fetchFromAPI(`channels?id=${id}&part=snippet,statistics`)
@@ -36,7 +37,7 @@ const ChannelDetail = () => {
       <div className="container py-5 bg-slate-700">
         <div className="profileImg">
           <h3 className='text-center text-4xl text-white'>{channelDetail.snippet?.title}</h3>
-          <p className='text-md md:px-10 px-5 py-3 text-white'>{channelDetail.snippet?.description}</p>
+          <p className='text-md md:px-10 px-5 py-3 text-white text-center'>{channelDetail.snippet?.description}</p>
 
           <div className="flex flex-col md:flex-row px-5 justify-between text-lg text-white md:px-20">
 
@@ -53,7 +54,7 @@ const ChannelDetail = () => {
       </div>
 
       <div className="container my-5 px-4 grid md:grid-cols-3 grid-cols-1 gap-4">
-        {ischannelVideosLoading ? 
+        {ischannelVideosLoading  ? 
         <>
         <Instagram/>
         <Instagram/>
@@ -61,7 +62,7 @@ const ChannelDetail = () => {
         </>
         :
           <>
-            {channelVideos.map((video, id) => {
+            {channelVideos?.map((video, id) => {
               return (
                 <VideoCard id={id} videoDetail={video} />
               )

@@ -36,7 +36,7 @@ export const Sidebar = () => {
             <ul className='w-full text-zinc-50 text-2xl m-2'>
                 {SidebarContent.map((item, id) => {
                     return (
-                        <NavLink to={`/search/${item.name}`}>
+                        <NavLink to={`/YT/search/${item.name}`}>
                             <li id={id} className={location === item.name ?
                                 "rounded-md bg-zinc-600  py-2  pl-10 my-2 text-left hover:bg-zinc-700" :
                                 " rounded-md py-2 my-2 text-left pl-10 cursor-pointer hover:bg-zinc-700"}>

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const VideoCard = ({ videoDetail }) => {
     return (
 
-        <NavLink to={videoDetail?.id?.videoId ? `/video/${videoDetail?.id?.videoId}` : `/channel/${videoDetail?.id.channelId}`}>
+        <NavLink to={videoDetail?.id?.videoId ? `/YT/video/${videoDetail?.id?.videoId}` : `/YT/channel/${videoDetail?.id.channelId}`}>
             <div className='w-68 rounded-md  mt-3  bg-zinc-800 h-80'>
                 <div className="w-full">
                     <img className="w-full h-48 rounded-tl-md rounded-tr-md " src={videoDetail.snippet.thumbnails.medium.url} alt="" />

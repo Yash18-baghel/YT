@@ -13,8 +13,8 @@ const Feed = () => {
     const [isLoading, SetisLoading] = useState(true)
 
     const param = useLocation();
-    const searchtext = param.pathname.split('/')[2];
-
+    const length = param.pathname.split('/').length
+    const searchtext = param.pathname.split('/')[length - 1]
 
     useEffect(() => {
         fetchFromAPI(`search?q=${searchtext}&part=snippet,id&regionCode=IN`)
