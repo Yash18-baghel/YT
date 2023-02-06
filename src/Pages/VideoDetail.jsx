@@ -75,7 +75,7 @@ const VideoDetail = () => {
                                 <h1 className="text-1xl md:text-3xl">{videoDetail.snippet?.localized?.title}</h1>
 
                                 <div className="flex justify-between mt-5 md:mr-16">
-                                    <NavLink className={"cursor-pointer"} to={`/channel/${videoDetail.snippet?.channelId}`}>
+                                    <NavLink className={"cursor-pointer"} to={`/YT/channel/${videoDetail.snippet?.channelId}`}>
                                         <h2 className="text-md md:text-2xl">{videoDetail.snippet?.channelTitle}</h2>
                                     </NavLink>
 
