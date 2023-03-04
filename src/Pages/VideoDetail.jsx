@@ -19,7 +19,7 @@ const VideoDetail = () => {
         if (window.innerWidth < 768) {
             SetlargeScreen(false)
         }
-        else{
+        else {
             SetlargeScreen(true)
         }
     }
@@ -39,6 +39,13 @@ const VideoDetail = () => {
     const [isSuggvideoLoading, SetisSuggvideoLoading] = useState(true)
 
     useEffect(() => {
+
+        if (window.innerWidth < 768) {
+            SetlargeScreen(false)
+        }
+        else {
+            SetlargeScreen(true)
+        }
         fetchFromAPI(`videos?part=contentDetails,snippet,statistics&id=${id}`)
             .then((data) => {
                 SetisvideoDetailLoading(false)
@@ -136,7 +143,7 @@ const VideoDetail = () => {
 
                                         <div className="flex items-center space-x-3">
                                             <img className="rounded-full" src={comment.snippet?.topLevelComment?.snippet?.authorProfileImageUrl} width={'25px'} height="25px" alt="" />
-                                            <NavLink to={`/channel/${comment.snippet?.topLevelComment?.snippet?.authorChannelId?.value}`}>
+                                            <NavLink to={`/YT/channel/${comment.snippet?.topLevelComment?.snippet?.authorChannelId?.value}`}>
                                                 <h4 className="text-lg flex items-center" >{comment?.snippet?.topLevelComment?.snippet?.authorDisplayName}</h4>
 
                                             </NavLink>
